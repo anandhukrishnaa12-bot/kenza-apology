@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Kenza ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #180b16, #3b1736, #100810);
+    color: white;
+    font-family: Georgia, serif;
+    overflow: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.card {
+    width: 100%;
+    max-width: 650px;
+    min-height: 520px;
+    padding: 45px 28px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 70px rgba(0,0,0,0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.page {
+    display: none;
+    animation: fade 0.7s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.heart {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 21px;
+    line-height: 1.7;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    color: #35152f;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.final {
+    font-size: 22px;
+}
+
+.small {
+    opacity: 0.6;
+    font-size: 14px;
+    margin-top: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<!-- PAGE 1 -->
+
+<div class="page active">
+
+<div class="heart">❤️</div>
+
+<h1>Hey my cutie patootie Kenza<br>my babyy</h1>
+
+<p>
+I have something to tell you...
+</p>
+
+<button onclick="nextPage()">Continue →</button>
+
+</div>
+
+
+<!-- PAGE 2 -->
+
+<div class="page">
+
+<div class="heart">🥺</div>
+
+<h1>I'm really sorry.</h1>
+
+<p>
+I know i have hurted you soo much.
+</p>
+
+<button onclick="nextPage()">Continue →</button>
+
+</div>
+
+
+<!-- PAGE 3 -->
+
+<div class="page">
+
+<div class="heart">💔</div>
+
+<h1>I made mistakes...</h1>
+
+<p>
+I made mistakes but it was never ever about cheating you.
+</p>
+
+<button onclick="nextPage()">Continue →</button>
+
+</div>
+
+
+<!-- PAGE 4 -->
+
+<div class="page">
+
+<div class="heart">❤️</div>
+
+<h1>Its crystal clear.</h1>
+
+<p>
+Enk nii illand onnum nadakula<br>
+nii alland vere aareyum njn ente heartilek edukula.
+</p>
+
+<button onclick="nextPage()">Continue →</button>
+
+</div>
+
+
+<!-- PAGE 5 -->
+
+<div class="page">
+
+<div class="heart">🥺❤️</div>
+
+<h1>I'm reallyyy sorry...</h1>
+
+<p>
+I am reallyyy sorry for hurting you.
+</p>
+
+<button onclick="nextPage()">Continue →</button>
+
+</div>
+
+
+<!-- PAGE 6 -->
+
+<div class="page">
+
+<div class="heart">👑</div>
+
+<h1>My promise to you...</h1>
+
+<p>
+Here after i will treat you like a princess.
+</p>
+
+<button onclick="nextPage()">Continue →</button>
+
+</div>
+
+
+<!-- PAGE 7 -->
+
+<div class="page">
+
+<div class="heart">❤️</div>
+
+<h1>One last thing...</h1>
+
+<p>
+Love you soo soo much.
+</p>
+
+<button onclick="nextPage()">Continue →</button>
+
+</div>
+
+
+<!-- FINAL PAGE -->
+
+<div class="page final">
+
+<div class="heart">❤️🥺❤️</div>
+
+<h1>My cutie patootie Kenza<br>my babyy</h1>
+
+<p>
+I am reallyyy sorry for hurting you.
+<br><br>
+Love you soo soo much. ❤️
+</p>
+
+<div class="small">
+— Anandhu
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+let currentPage = 0;
+
+const pages = document.querySelectorAll(".page");
+
+function nextPage() {
+
+    pages[currentPage].classList.remove("active");
+
+    currentPage++;
+
+    if (currentPage < pages.length) {
+
+        pages[currentPage].classList.add("active");
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
