@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>For Kenza ❤️</title>
+<title>For Kenzaaa ❤️</title>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -14,47 +15,91 @@
 body {
     margin: 0;
     min-height: 100vh;
-    background: linear-gradient(135deg, #180b16, #3b1736, #100810);
-    color: white;
-    font-family: Georgia, serif;
+    font-family: "Georgia", serif;
+    background: linear-gradient(135deg, #ffb6d5, #d8b4fe, #ffc6d9);
+    color: #4b2142;
     overflow: hidden;
 }
 
-.container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
+/* Floating hearts */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 22px;
+    animation: float 7s linear infinite;
+    opacity: 0.7;
+    z-index: 0;
 }
 
-.card {
-    width: 100%;
-    max-width: 650px;
-    min-height: 520px;
-    padding: 45px 28px;
-    border-radius: 30px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 20px 70px rgba(0,0,0,0.5);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.heart:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
 }
+
+.heart:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.heart:nth-child(3) {
+    left: 50%;
+    animation-delay: 4s;
+}
+
+.heart:nth-child(4) {
+    left: 70%;
+    animation-delay: 1s;
+}
+
+.heart:nth-child(5) {
+    left: 90%;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+/* Pages */
 
 .page {
+    position: absolute;
+    inset: 0;
+
     display: none;
-    animation: fade 0.7s ease;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    text-align: center;
+
+    z-index: 1;
+
+    animation: fadeIn 0.7s ease;
 }
 
 .page.active {
-    display: block;
+    display: flex;
 }
 
-@keyframes fade {
+@keyframes fadeIn {
+
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -64,196 +109,392 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
-.heart {
-    font-size: 55px;
+/* Card */
+
+.card {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 35px 25px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.78);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 50px rgba(80,30,70,0.2);
+
+    border: 1px solid rgba(255,255,255,0.8);
+}
+
+/* Headings */
+
+h1 {
+    color: #d63384;
+    font-size: 42px;
     margin-bottom: 20px;
 }
 
-h1 {
-    font-size: 42px;
-    line-height: 1.2;
-    margin-bottom: 25px;
+h2 {
+    color: #d63384;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
-p {
-    font-size: 21px;
-    line-height: 1.7;
+/* Text */
+
+.text {
+    font-size: 20px;
+    line-height: 1.9;
+    white-space: pre-line;
 }
+
+/* Buttons */
 
 button {
-    margin-top: 30px;
-    padding: 15px 32px;
+    margin-top: 28px;
+
+    padding: 14px 32px;
+
     border: none;
-    border-radius: 50px;
-    background: white;
-    color: #35152f;
+    border-radius: 30px;
+
+    background: linear-gradient(90deg,#ff4f9a,#a855f7);
+
+    color: white;
+
     font-size: 17px;
-    font-weight: bold;
+
     cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(168,85,247,0.3);
+
+    transition: 0.3s;
 }
 
-button:active {
-    transform: scale(0.95);
+button:hover {
+    transform: scale(1.06);
 }
 
-.final {
-    font-size: 22px;
+/* Photos */
+
+.photo {
+    width: 100%;
+    max-width: 420px;
+
+    max-height: 55vh;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(70,20,60,0.3);
+
+    margin-bottom: 10px;
 }
 
-.small {
-    opacity: 0.6;
-    font-size: 14px;
-    margin-top: 25px;
+/* Final */
+
+.final-love {
+    font-size: 30px;
+    line-height: 1.7;
+    font-weight: bold;
+    color: #d63384;
 }
+
+/* Mobile */
+
+@media(max-width:600px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .text {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- Floating hearts -->
 
-<div class="card">
+<div class="heart">❤️</div>
+<div class="heart">💕</div>
+<div class="heart">💗</div>
+<div class="heart">💖</div>
+<div class="heart">💞</div>
+
 
 <!-- PAGE 1 -->
 
-<div class="page active">
+<div class="page active" id="page1">
 
-<div class="heart">❤️</div>
+<div class="card">
 
-<h1>Hey my cutie patootie Kenza<br>my babyy</h1>
+<h1>For Kenzaaa ❤️</h1>
 
-<p>
-I have something to tell you...
-</p>
+<div class="text">
+Kenzaaa... 🥺❤️
 
-<button onclick="nextPage()">Continue →</button>
+I made this little thing only for you.
+
+Please don't rush.
+Just go through it slowly.
+</div>
+
+<button onclick="nextPage()">
+Continue ❤️
+</button>
+
+</div>
 
 </div>
 
 
 <!-- PAGE 2 -->
 
-<div class="page">
+<div class="page" id="page2">
 
-<div class="heart">🥺</div>
+<div class="card">
 
-<h1>I'm really sorry.</h1>
+<h2>Just something from me... 💗</h2>
 
-<p>
-I know i have hurted you soo much.
-</p>
+<div class="text">
+kenzaaa from now on i will be as good as you always want me to. njn ninne orikkalu eni uncomfortable aakula orikkalum insecure aakula in any kind of situations.
+</div>
 
-<button onclick="nextPage()">Continue →</button>
+<button onclick="nextPage()">
+Continue ❤️
+</button>
+
+</div>
 
 </div>
 
 
-<!-- PAGE 3 -->
+<!-- PHOTO 1 -->
 
-<div class="page">
+<div class="page" id="page3">
 
-<div class="heart">💔</div>
+<div class="card">
 
-<h1>I made mistakes...</h1>
+<img src="photos/photo1.jpg" class="photo">
 
-<p>
-I made mistakes but it was never ever about cheating you.
-</p>
+<div class="text">
+This is one of the memories that means a lot to me. ❤️
+</div>
 
-<button onclick="nextPage()">Continue →</button>
+<button onclick="nextPage()">
+Continue 💗
+</button>
+
+</div>
 
 </div>
 
 
 <!-- PAGE 4 -->
 
-<div class="page">
+<div class="page" id="page4">
 
-<div class="heart">❤️</div>
+<div class="card">
 
-<h1>Its crystal clear.</h1>
+<h2>Only you ❤️</h2>
 
-<p>
-Enk nii illand onnum nadakula<br>
-nii alland vere aareyum njn ente heartilek edukula.
-</p>
+<div class="text">
+i just want you only you. njn eni ellam paraynda samayath thanne parayumm. misunderstandings avoid cheyyum.
+</div>
 
-<button onclick="nextPage()">Continue →</button>
+<button onclick="nextPage()">
+Continue ❤️
+</button>
+
+</div>
 
 </div>
 
 
-<!-- PAGE 5 -->
+<!-- PHOTO 2 -->
 
-<div class="page">
+<div class="page" id="page5">
 
-<div class="heart">🥺❤️</div>
+<div class="card">
 
-<h1>I'm reallyyy sorry...</h1>
+<img src="photos/photo2.jpg" class="photo">
 
-<p>
-I am reallyyy sorry for hurting you.
-</p>
+<div class="text">
+Ninne ponnn pole nookum. ninne manasilaakum. ❤️
+</div>
 
-<button onclick="nextPage()">Continue →</button>
+<button onclick="nextPage()">
+Continue 💕
+</button>
+
+</div>
 
 </div>
 
 
 <!-- PAGE 6 -->
 
-<div class="page">
+<div class="page" id="page6">
 
-<div class="heart">👑</div>
+<div class="card">
 
-<h1>My promise to you...</h1>
+<h2>I'm always here... 🫶</h2>
 
-<p>
-Here after i will treat you like a princess.
-</p>
+<div class="text">
+nink vendi njn eppolum indavum. im always here for you. i will be there for you.
+</div>
 
-<button onclick="nextPage()">Continue →</button>
+<button onclick="nextPage()">
+Continue ❤️
+</button>
+
+</div>
 
 </div>
 
 
-<!-- PAGE 7 -->
+<!-- PHOTO 3 -->
 
-<div class="page">
+<div class="page" id="page7">
 
-<div class="heart">❤️</div>
+<div class="card">
 
-<h1>One last thing...</h1>
+<img src="photos/photo3.jpg" class="photo">
 
-<p>
-Love you soo soo much.
-</p>
+<div class="text">
+And this is another little memory of us. ❤️
+</div>
 
-<button onclick="nextPage()">Continue →</button>
+<button onclick="nextPage()">
+Continue 💗
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PAGE 8 -->
+
+<div class="page" id="page8">
+
+<div class="card">
+
+<h2>One thing I want you to know... ❤️</h2>
+
+<div class="text">
+i loveee youuu soo soooo soooo muchhhhh i will never ever cheat you. i cant do that.
+</div>
+
+<button onclick="nextPage()">
+Continue ❤️
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO 4 -->
+
+<div class="page" id="page9">
+
+<div class="card">
+
+<img src="photos/photo4.jpg" class="photo">
+
+<div class="text">
+because you are really different. ❤️
+</div>
+
+<button onclick="nextPage()">
+Continue 💕
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PAGE 10 -->
+
+<div class="page" id="page10">
+
+<div class="card">
+
+<div class="text">
+and you are the only girl who loves me,cares me because of you njn love enna vaakinte artham manasilaaki.
+</div>
+
+<button onclick="nextPage()">
+Continue ❤️
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO 5 -->
+
+<div class="page" id="page11">
+
+<div class="card">
+
+<img src="photos/photo5.jpg" class="photo">
+
+<div class="text">
+because of you i felt what the word LOVE is. ❤️
+</div>
+
+<button onclick="nextPage()">
+Continue 💗
+</button>
+
+</div>
 
 </div>
 
 
 <!-- FINAL PAGE -->
 
-<div class="page final">
+<div class="page" id="page12">
 
-<div class="heart">❤️🥺❤️</div>
+<div class="card">
 
-<h1>My cutie patootie Kenza<br>my babyy</h1>
+<h2>For you, Kenzaaa ❤️</h2>
 
-<p>
-I am reallyyy sorry for hurting you.
-<br><br>
-Love you soo soo much. ❤️
-</p>
+<div class="final-love">
 
-<div class="small">
-— Anandhu
+i love youuu sooo sooo sooo muchhhhhhhh. ❤️
+
 </div>
 
+<div class="text">
+Always. 🫶
 </div>
 
 </div>
@@ -263,19 +504,20 @@ Love you soo soo much. ❤️
 
 <script>
 
-let currentPage = 0;
-
-const pages = document.querySelectorAll(".page");
+let currentPage = 1;
 
 function nextPage() {
 
-    pages[currentPage].classList.remove("active");
+    document.getElementById("page" + currentPage)
+        .classList.remove("active");
 
     currentPage++;
 
-    if (currentPage < pages.length) {
+    const next = document.getElementById("page" + currentPage);
 
-        pages[currentPage].classList.add("active");
+    if(next) {
+
+        next.classList.add("active");
 
     }
 
